@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://ui-task2.onrender.com/';
 const PostListPage = () => {
     const [posts, setPosts] = useState([]);
     const [hasMore, setHasMore] = useState(true);
@@ -20,7 +20,7 @@ const PostListPage = () => {
         };
 
         try {
-            const res = await axios.get(`/api/posts/`, config);
+            const res = await axios.get(`${BASE_URL}/api/posts/`, config);
             setPosts(prevPosts => [...prevPosts, ...res.data]);
             if (res.data.length === 0) setHasMore(false);
         } catch (err) {

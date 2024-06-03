@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://ui-task2.onrender.com/';
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ const SignupPage = () => {
     
         // console.log('Form data:', formData); // Log form data
         try {
-            const res = await axios.post(`/api/auth/signup`, formData);
+            const res = await axios.post(`${BASE_URL}/api/auth/signup`, formData);
             localStorage.setItem('token', res.data.token);
             alert("Signup successful! Redirecting to posts page...🚀")
             navigate('/posts');
