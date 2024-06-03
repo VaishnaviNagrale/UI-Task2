@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const BASE_URL = 'https://ui-task2.onrender.com/';
+const BASE_URL = 'https://ui-task2.onrender.com';
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({

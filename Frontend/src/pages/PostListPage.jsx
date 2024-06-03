@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const BASE_URL = 'https://ui-task2.onrender.com/';
+const BASE_URL = 'https://ui-task2.onrender.com';
 const PostListPage = () => {
     const [posts, setPosts] = useState([]);
     const [hasMore, setHasMore] = useState(true);
