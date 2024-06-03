@@ -20,7 +20,7 @@ const PostListPage = () => {
         };
 
         try {
-            const res = await axios.get(`${BASE_URL}/api/posts/`, config);
+            const res = await axios.get(`/api/posts/`, config);
             setPosts(prevPosts => [...prevPosts, ...res.data]);
             if (res.data.length === 0) setHasMore(false);
         } catch (err) {

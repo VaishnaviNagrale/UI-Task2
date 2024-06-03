@@ -10,6 +10,7 @@ const app = express();
 connectDB();
 
 // Init Middleware
+app.use(express.static('dist'));
 app.use(json());
 app.use(cors({
     origin: '*',
